@@ -13,8 +13,8 @@ spec:
         app: mrburnwal-DevOps
     spec:
       containers:
-      - name: mrburnwal-DevOps
-        image: mrburnwal/kubernets-deploy
-        imagePullPolicy: Always
-        ports:
+        - name: mrburnwal-DevOps
+          image: mrburnwal/kubernets-deploy
+          imagePullPolicy: Always
+      ports:
         - containerPort: 80
