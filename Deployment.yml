@@ -17,4 +17,4 @@ spec:
           image: mrburnwal/kubernets-deploy
           imagePullPolicy: Always
       ports:
-        - containerPort: 80
+      - containerPort: 80
