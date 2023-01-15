@@ -1,20 +1,20 @@
-apiVersion: apps/v1
 kind: Deployment
+apiVersion: apps/v1
 metadata:
-  name: mrburnwal-DevOps
+   name: mrburnwal-DevOps
 spec:
-  replicas: 2
-  selector:
+   replicas: 2
+   selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-      app: mrburnwal-DevOps
-  template:
-    metadata:
-      labels:
-        app: mrburnwal-DevOps
-    spec:
-      containers:
+     app: mrburnwal-DevOps
+   template:
+      metadata:
+        labels:
+          app: mrburnwal-DevOps
+      spec:
+       containers:
         - name: mrburnwal-DevOps
           image: mrburnwal/kubernets-deploy
           imagePullPolicy: Always
-      ports:
-      - containerPort: 80
+          ports:
+          - containerPort: 80
