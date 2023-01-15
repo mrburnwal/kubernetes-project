@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mrburnwal-DevOps
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mrburnwal-DevOps
+  template:
+    metadata:
+      labels:
+        app: mrburnwal-DevOps
+    spec:
+      containers:
+      - name: mrburnwal-DevOps
+        image: mrburnwal/kubernets-deploy
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
